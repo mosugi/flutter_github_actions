@@ -24,6 +24,7 @@ jobs:
         PERSONAL_ACCESS_TOKEN_GITHUB: ${{ secrets.PERSONAL_ACCESS_TOKEN_GITHUB }} # In case of using match
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }} # In case of using match
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+      working-directory: ./ios
       run: |
         npm install -g firebase-tools
 
