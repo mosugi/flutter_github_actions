@@ -27,6 +27,7 @@ jobs:
       working-directory: ./ios
       run: |
         npm install -g firebase-tools
+        gem install bundler
 
         sudo xcode-select -s /Applications/Xcode_11.app
         bundle install
