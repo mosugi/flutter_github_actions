@@ -10,17 +10,18 @@ platform :ios do
       type: "adhoc",
       readonly: true
     ) unless is_ci
-    # build_app(
-    #   scheme: "Runner",
-    #   export_options: {
-    #     method: "ad-hoc"
-    #   }
-    # )
+    build_app(
+      scheme: "Runner",
+      export_options: {
+        method: "ad-hoc"
+      }
+    )
     firebase_app_distribution(
       app: "1:983164358479:ios:18e234baa2fcd2dee5ff3a",
       groups: "all",
       release_notes: "Lots of amazing new features to test out!",
-      firebase_cli_path: `which firebase`.strip()
+      firebase_cli_path: `which firebase`.strip(),
+      ipa_path: 
     )
   end
 
