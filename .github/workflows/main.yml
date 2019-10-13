@@ -35,7 +35,7 @@ jobs:
         flutter build apk --release
         flutter build web
     - name: Deploy to Firebase Hosting
-        firebase deploy --token $FIREBASE_TOKEN
+      run: firebase deploy --token $FIREBASE_TOKEN
       env:
         FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
     - name: Deploy to Firebase App Distribution iOS
