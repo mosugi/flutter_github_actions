@@ -32,6 +32,8 @@ jobs:
         flutter build web
         firebase deploy --token $FIREBASE_TOKEN
       working-directory: ./
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
     - name: iOS
       run: |
         bundle install
