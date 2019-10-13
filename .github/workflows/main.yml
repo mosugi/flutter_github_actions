@@ -25,11 +25,22 @@ jobs:
         gem install bundler:1.17.2
         sudo xcode-select -s /Applications/Xcode_11.app
         flutter build ios --release --no-codesign
+        flutter build apk --release
       working-directory: ./
-    - run: |
+    - name: iOS
+      run: |
         bundle install
         bundle exec fastlane app_distribution
       working-directory: ./ios
+      env:
+        PERSONAL_ACCESS_TOKEN_GITHUB: ${{ secrets.PERSONAL_ACCESS_TOKEN_GITHUB }} # In case of using match
+        MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }} # In case of using match
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+    - name: Android
+      run: |
+        bundle install
+        bundle exec fastlane beta
+      working-directory: ./android
       env:
         PERSONAL_ACCESS_TOKEN_GITHUB: ${{ secrets.PERSONAL_ACCESS_TOKEN_GITHUB }} # In case of using match
         MATCH_PASSWORD: ${{ secrets.MATCH_PASSWORD }} # In case of using match
