@@ -30,6 +30,7 @@ jobs:
         flutter upgrade
         flutter config --enable-web
         flutter build web
+        firebase deploy --token $FIREBASE_TOKEN
       working-directory: ./
     - name: iOS
       run: |
