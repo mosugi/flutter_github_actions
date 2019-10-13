@@ -20,8 +20,7 @@ platform :ios do
       app: "1:983164358479:ios:18e234baa2fcd2dee5ff3a",
       groups: "all",
       release_notes: "Lots of amazing new features to test out!",
-      firebase_cli_path: `which firebase`.strip(),
-      ipa_path: 
+      firebase_cli_path: `which firebase`.strip()
     )
   end
 
