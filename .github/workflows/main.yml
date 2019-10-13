@@ -26,6 +26,9 @@ jobs:
         sudo xcode-select -s /Applications/Xcode_11.app
         flutter build ios --release --no-codesign
         flutter build apk --release
+        flutter channel master
+        flutter upgrade
+        flutter config --enable-web
         flutter build web
       working-directory: ./
     - name: iOS
