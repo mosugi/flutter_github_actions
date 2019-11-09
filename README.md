@@ -1,16 +1,28 @@
 # flutter_github_actions
 
-A new Flutter project.
+This project is flutter uses GitHub actions sample.
 
-## Getting Started
+## Env
 
-This project is a starting point for a Flutter application.
+Repository Secrets
 
-A few resources to get you started if this is your first Flutter project:
+|Key|Value|
+|---|---|
+|PERSONAL_ACCESS_TOKEN_GITHUB|base64(username:token)|
+|MATCH_PASSWORD|fastlane match password|
+|FIREBASE_TOKEN|`firebase login:ci`|
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## fastlane
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Create certificates
+
+`fastlane match adhoc`
+
+## Firebase Distribution App ID
+
+Create Distribution App ID
+Settings -> My App -> App ID
+
+## Reference
+
+https://kouki.hatenadiary.com/entry/2019/10/02/094358
